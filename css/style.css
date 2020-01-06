@@ -1,32 +1,52 @@
-html,
-body,
-header,
-.carousel {
-  height: 100vh;
+.navbar .navbar-brand img {
+  height: 20px;
 }
+
+.navbar .navbar-brand {
+  padding-top: 0;
+}
+
+.navbar .nav-link {
+  color: #444343!important;
+}
+
+.navbar .button-collapse {
+  padding-top: 1px;
+}
+
+.card-intro .card-body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-radius: 0 !important;
+}
+
+.card-intro .card-body h1 {
+  margin-bottom: 0;
+}
+
+.card-intro {
+  margin-top: 64px;
+}
+
+@media (max-width: 450px) {
+  .card-intro {
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .card-intro {
+    padding-left: 0 !important;
+  }
+}
+
+
+
+/* //////////////////////// */
 .border-bottom{
   border-width:thick !important;
   border-color: #800000 !important;
 }
-@media (max-width: 740px) {
-  html,
-  body,
-  header,
-  .carousel {
-    height: 100vh;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 850px) {
-  html,
-  body,
-  header,
-  .carousel {
-    height: 100vh;
-  }
-}
-.view,body,html{height:100%}.carousel{height:100%}.carousel .carousel-inner,.carousel .carousel-inner .active,.carousel .carousel-inner .carousel-item{height:100%}@media (max-width:776px){.carousel{height:100%}}.page-footer{background-color:#929FBA}
-
 
 ul{
   font-size: 14px;

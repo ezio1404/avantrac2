@@ -24,8 +24,8 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="#" target="_blank">
-        <img src="images/logo/logo-notwhite.png" class="img-fluid" width="200" alt="logo">
+      <a class="navbar-brand waves-effect" href="">
+        <img src="images/logo/logo-notwhite.png" style="height: 40px !important;" alt="Logo">
       </a>
 
       <!-- Collapse -->
@@ -40,35 +40,38 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="#">Home
-              <span class="sr-only">(current)</span>
-            </a>
+            <a class="nav-link waves-effect" href="">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="#" target="_blank">About MDB</a>
+            <a class="nav-link waves-effect" href="">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="#" target="_blank">Free download</a>
+            <a class="nav-link waves-effect" href="">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/" target="_blank">Free
-              tutorials</a>
+            <a class="nav-link waves-effect" href="">Gallery</a>
           </li>
         </ul>
 
         <!-- Right -->
         <ul class="navbar-nav nav-flex-icons">
-
           <li class="nav-item">
-            <a href="https://www.facebook.com/mdbootstrap" class="nav-link waves-effect" target="_blank">
+            <a href="https://www.facebook.com/avantrac" class="nav-link waves-effect">
               <i class="fab fa-facebook-f"></i>
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="https://github.com/mdbootstrap/bootstrap-material-design"
-              class="nav-link border border-light rounded waves-effect" target="_blank">
-              <i class="fas fa-envelope mr-2"></i>Contact Us
+            <!-- put email here in avantrac -->
+            <a href="mailto:webmaster@example.com?Subject=Avantrac%20Inquiry"
+              class="nav-link border border-light rounded waves-effect mr-2">
+              <i class="fas fa-envelope mr-1"></i>Email us
+            </a>
+          </li>
+          <li class="nav-item">
+            <!-- put email here in avantrac -->
+            <a href="tel:+032 253 1871" class="nav-link border border-light rounded waves-effect mr-2">
+              <i class="fas fa-phone mr-1"></i>Call us
             </a>
           </li>
         </ul>
@@ -79,467 +82,267 @@
   </nav>
   <!-- Navbar -->
 
-  <!--Carousel Wrapper-->
-  <div id="carousel-example-1z" class="carousel slide carousel-fade pt-4" data-ride="carousel">
-
-    <!--Indicators-->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="1"></li>
-      <li data-target="#carousel-example-1z" data-slide-to="2"></li>
-    </ol>
-    <!--/.Indicators-->
-
-    <!--Slides-->
-    <div class="carousel-inner" role="listbox">
-
-      <!--First slide-->
-      <div class="carousel-item active">
-        <div class="view"
-          style="background-image: url('images/carousel/carousel1.png'); background-repeat: no-repeat; background-size: cover;">
-
+  <!-- Intro -->
+  <div class="card card-intro mb-5 ">
+    <div class="container-fluid mb-4 px-0">
+      <!--Carousel Wrapper-->
+      <div id="carousel-example-1z" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+        <!--Indicators-->
+        <ol class="carousel-indicators">
+          <li data-target="#carousel-example-1z" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel-example-1z" data-slide-to="1"></li>
+          <li data-target="#carousel-example-1z" data-slide-to="2"></li>
+        </ol>
+        <!--/.Indicators-->
+        <!--Slides-->
+        <div class="carousel-inner" role="listbox">
+          <!--First slide-->
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="images/carousel/carousel1.png" alt="First slide">
+          </div>
+          <!--/First slide-->
+          <!--Second slide-->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/carousel2.png" alt="Second slide">
+          </div>
+          <!--/Second slide-->
+          <!--Third slide-->
+          <div class="carousel-item">
+            <img class="d-block w-100" src="images/carousel/carousel3.png" alt="Third slide">
+          </div>
+          <!--/Third slide-->
         </div>
+        <!--/.Slides-->
+        <!--Controls-->
+        <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+        <!--/.Controls-->
       </div>
-      <!--/First slide-->
-
-      <!--Second slide-->
-      <div class="carousel-item">
-        <div class="view"
-          style="background-image: url('images/carousel/carousel2.png'); background-repeat: no-repeat; background-size: cover;">
-
-
-          <!-- Mask & flexbox options-->
-
-        </div>
-      </div>
-      <!--/Second slide-->
-
-      <!--Third slide-->
-      <div class="carousel-item">
-        <div class="view"
-          style="background-image: url('images/carousel/carousel3.png'); background-repeat: no-repeat; background-size: cover;">
-
-        </div>
-      </div>
-      <!--/Third slide-->
+      <!--/.Carousel Wrapper-->
 
     </div>
-    <!--/.Slides-->
+    <!-- Intro -->
 
-    <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-example-1z" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-example-1z" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-    <!--/.Controls-->
+
 
   </div>
-  <!--/.Carousel Wrapper-->
 
   <!--Main layout-->
   <main>
     <div class="container">
-
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar-dark mdb-color lighten-3 mt-3 mb-5">
-
-        <!-- Navbar brand -->
-        <span class="navbar-brand">Categories:</span>
-
-        <!-- Collapse button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
-          aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Collapsible content -->
-        <div class="collapse navbar-collapse" id="basicExampleNav">
-
-          <!-- Links -->
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">All
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Shirts</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sport wears</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Outwears</a>
-            </li>
-
-          </ul>
-          <!-- Links -->
-
-          <form class="form-inline">
-            <div class="md-form my-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            </div>
-          </form>
-        </div>
-        <!-- Collapsible content -->
-
-      </nav>
-      <!--/.Navbar-->
-
+      <h2 class="text-uppercase text-center">Truck Brands</h2>
+      <hr>
       <!--Section: Products v.3-->
-      <section class="text-center mb-4">
+      <section class=" mb-4">
 
         <!--Grid row-->
         <div class="row wow fadeIn">
 
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
 
-            <!--Card-->
+            <!-- Card -->
             <div class="card">
 
-              <!--Card image-->
+              <!-- Card image -->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top"
-                  alt="">
-                <a>
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <!--Card image-->
 
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Shirt</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Denim shirt
-                      <span class="badge badge-pill danger-color">NEW</span>
-                    </a>
-                  </strong>
-                </h5>
+              <!-- Card content -->
+              <div class="card-body">
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>120$</strong>
-                </h4>
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
-              <!--Card content-->
 
             </div>
-            <!--Card-->
+            <!-- Card -->
 
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
 
-            <!--Card-->
+            <!-- Card -->
             <div class="card">
 
-              <!--Card image-->
+              <!-- Card image -->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg" class="card-img-top"
-                  alt="">
-                <a>
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <!--Card image-->
 
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Sport wear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Sweatshirt</a>
-                  </strong>
-                </h5>
+              <!-- Card content -->
+              <div class="card-body">
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>139$</strong>
-                </h4>
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
-              <!--Card content-->
 
             </div>
-            <!--Card-->
+            <!-- Card -->
 
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <div class="col-lg-4 col-md-6 mb-4">
 
-            <!--Card-->
+            <!-- Card -->
             <div class="card">
 
-              <!--Card image-->
+              <!-- Card image -->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg" class="card-img-top"
-                  alt="">
-                <a>
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <!--Card image-->
 
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Sport wear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Grey blouse
-                      <span class="badge badge-pill primary-color">bestseller</span>
-                    </a>
-                  </strong>
-                </h5>
+              <!-- Card content -->
+              <div class="card-body">
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>99$</strong>
-                </h4>
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
-              <!--Card content-->
 
             </div>
-            <!--Card-->
+            <!-- Card -->
 
           </div>
           <!--Grid column-->
 
-          <!--Fourth column-->
-          <div class="col-lg-3 col-md-6 mb-4">
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
 
-            <!--Card-->
+            <!-- Card -->
             <div class="card">
 
-              <!--Card image-->
+              <!-- Card image -->
               <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg" class="card-img-top"
-                  alt="">
-                <a>
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
-              <!--Card image-->
 
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Outwear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Black jacket</a>
-                  </strong>
-                </h5>
+              <!-- Card content -->
+              <div class="card-body">
 
-                <h4 class="font-weight-bold blue-text">
-                  <strong>219$</strong>
-                </h4>
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
-              <!--Card content-->
 
             </div>
-            <!--Card-->
+            <!-- Card -->
 
           </div>
-          <!--Fourth column-->
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
 
+            <!-- Card -->
+            <div class="card">
+
+              <!-- Card image -->
+              <div class="view overlay">
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!--Grid column-->
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+
+            <!-- Card -->
+            <div class="card">
+
+              <!-- Card image -->
+              <div class="view overlay">
+                <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
+
+              <!-- Card content -->
+              <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title">truck brands</h4>
+                <!-- Text -->
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                  card's content.</p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+
+          </div>
+          <!--Grid column-->
         </div>
         <!--Grid row-->
 
-        <!--Grid row-->
-        <div class="row wow fadeIn">
 
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/13.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Shirt</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Denim shirt
-                      <span class="badge badge-pill danger-color">NEW</span>
-                    </a>
-                  </strong>
-                </h5>
-
-                <h4 class="font-weight-bold blue-text">
-                  <strong>120$</strong>
-                </h4>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/14.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Sport wear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Sweatshirt</a>
-                  </strong>
-                </h5>
-
-                <h4 class="font-weight-bold blue-text">
-                  <strong>139$</strong>
-                </h4>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/15.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Sport wear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Grey blouse
-                      <span class="badge badge-pill primary-color">bestseller</span>
-                    </a>
-                  </strong>
-                </h5>
-
-                <h4 class="font-weight-bold blue-text">
-                  <strong>99$</strong>
-                </h4>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Grid column-->
-
-          <!--Fourth column-->
-          <div class="col-lg-3 col-md-6 mb-4">
-
-            <!--Card-->
-            <div class="card">
-
-              <!--Card image-->
-              <div class="view overlay">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg" class="card-img-top"
-                  alt="">
-                <a>
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
-              <!--Card image-->
-
-              <!--Card content-->
-              <div class="card-body text-center">
-                <!--Category & Title-->
-                <a href="" class="grey-text">
-                  <h5>Outwear</h5>
-                </a>
-                <h5>
-                  <strong>
-                    <a href="" class="dark-grey-text">Black jacket</a>
-                  </strong>
-                </h5>
-
-                <h4 class="font-weight-bold blue-text">
-                  <strong>219$</strong>
-                </h4>
-
-              </div>
-              <!--Card content-->
-
-            </div>
-            <!--Card-->
-
-          </div>
-          <!--Fourth column-->
-
-        </div>
-        <!--Grid row-->
 
       </section>
       <!--Section: Products v.3-->
@@ -569,9 +372,12 @@
             corrupti architecto officia sequi assumenda quidem.
           </p>
           <ul class="list-unstyled">
-            <li class="list-icon"><i class="fas fa-map-marker"></i>41 F. Ramos St, Cebu City, 6000 Cebu</li>
-            <li><i class="fas fa-phone-alt"></i>(032) 253 1871</li>
-            <li> <i class="far fa-envelope"></i> avantgrac@gmail.com</li>
+            <li> <a
+                href="https://www.google.com/maps/place/Avantrac+Heavy+Machinery+Inc./@10.2834911,123.8586933,16.75z/data=!4m5!3m4!1s0x33a99c3f171580c1:0x29a4beccf50506b3!8m2!3d10.2841703!4d123.859529"
+                target="_blank"><i class="fas fa-map-marker"></i>41 F. Ramos St, Cebu City, 6000 Cebu</a></li>
+            <li> <a href="tel:+032 253 1871"> <i class="fas fa-phone-alt"></i>(032) 253 1871</a></li>
+            <li> <a href="mmailto:webmaster@example.com?Subject=Avantrac%20Inquiry"> <i class="far fa-envelope"></i>
+                avantgrac@gmail.com</a></li>
           </ul>
 
         </div>
@@ -585,7 +391,7 @@
           <!-- Links -->
           <h5 class="text-uppercase">Quick Links</h5>
 
-          <ul class="list-unstyled">
+          <ul class="list-unstyled custom-list">
             <li class="text-uppercase">
               <a href="#!">home</a>
             </li>
@@ -613,18 +419,16 @@
           <div class="row">
             <div class="col">
               <div class="view overlay z-depth-1-half">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
-                  alt="">
-                <a href="">
+                <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
+                <a data-toggle="modal" data-target="#basicExampleModal1">
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
             </div>
             <div class="col">
               <div class="view overlay z-depth-1-half">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
-                  alt="">
-                <a href="">
+                <img src="images/carousel/carousel2.png" class="img-fluid" alt="">
+                <a data-toggle="modal" data-target="#basicExampleModal2">
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
@@ -633,18 +437,16 @@
           <div class="row pt-2">
             <div class="col">
               <div class="view overlay z-depth-1-half">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
-                  alt="">
-                <a href="">
+                <img src="images/carousel/carousel3.png" class="img-fluid" alt="">
+                <a data-toggle="modal" data-target="#basicExampleModal3">
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
             </div>
             <div class="col">
               <div class="view overlay z-depth-1-half">
-                <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
-                  alt="">
-                <a href="">
+                <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
+                <a data-toggle="modal" data-target="#basicExampleModal4">
                   <div class="mask rgba-white-light"></div>
                 </a>
               </div>
@@ -662,13 +464,79 @@
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">Copyright © 2019 Avantrac - All Rights Reserved.
-      <a href="https://avantrac.com"> Avantrac.com</a>
+      <a href="https://avantrac.net"> Avantrac.com</a>
     </div>
     <!-- Copyright -->
 
   </footer>
   <!-- Footer -->
-  <!-- Footer -->
+  <!-- modal ///////////////////// -->
+  <!-- Modal -->
+  <div class="modal fade " id="basicExampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade " id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body ">
+          <img src="images/carousel/carousel2.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade " id="basicExampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/carousel/carousel3.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade " id="basicExampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"></h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- modal ///////////////////// -->
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
