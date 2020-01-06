@@ -51,16 +51,22 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
           </li>
+          <li class="nav-item">
+            <form class="form-inline">
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+          </li>
         </ul>
 
         <!-- Right -->
-        <ul class="navbar-nav nav-flex-icons">
+        <ul class="navbar-nav nav-flex-icons pt-1">
           <li class="nav-item">
             <a href="https://www.facebook.com/avantrac" class="nav-link waves-effect">
               <i class="fab fa-facebook-f"></i>
             </a>
           </li>
-
           <li class="nav-item">
             <!-- put email here in avantrac -->
             <a href="mailto:webmaster@example.com?Subject=Avantrac%20Inquiry"
@@ -143,7 +149,7 @@
 
         <!--Grid row-->
         <div class="row wow fadeIn">
-<!-- loop here  -->
+          <!-- loop here  -->
           <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
 
@@ -357,7 +363,7 @@
   <!-- /footer -->
   <!-- modal ///////////////////// -->
   <!-- Modal -->
- 
+
   <!-- modal ///////////////////// -->
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
