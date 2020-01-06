@@ -24,7 +24,7 @@
     <div class="container">
 
       <!-- Brand -->
-      <a class="navbar-brand waves-effect" href="">
+      <a class="navbar-brand waves-effect" href="index.php">
         <img src="images/logo/logo-notwhite.png" style="height: 40px !important;" alt="Logo">
       </a>
 
@@ -40,16 +40,16 @@
         <!-- Left -->
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link waves-effect" href="">Home</a>
+            <a class="nav-link waves-effect" href="index.php">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="">About</a>
+            <a class="nav-link waves-effect" href="about.php">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="">Contact</a>
+            <a class="nav-link waves-effect" href="contact.php">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link waves-effect" href="">Gallery</a>
+            <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
           </li>
         </ul>
 
@@ -143,7 +143,7 @@
 
         <!--Grid row-->
         <div class="row wow fadeIn">
-
+<!-- loop here  -->
           <!--Grid column-->
           <div class="col-lg-4 col-md-6 mb-4">
 
@@ -352,190 +352,12 @@
     </div>
   </main>
   <!--Main layout-->
-  <!-- Footer -->
-  <footer class="page-footer font-small grey darken-3 pt-4">
-
-    <!-- Footer Links -->
-    <div class="container text-center text-md-left">
-
-      <!-- Grid row -->
-      <div class="row">
-
-        <!-- Grid column -->
-        <div class="col-md-6 mt-md-0 mt-3 pl-5">
-
-          <!-- Content -->
-          <img src="images/logo/logowhite.png" class="img-fluid" alt="">
-          <h5 class="text-uppercase">Avantrac</h5>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum corporis rerum necessitatibus dolorum
-            corrupti architecto officia sequi assumenda quidem.
-          </p>
-          <ul class="list-unstyled">
-            <li> <a
-                href="https://www.google.com/maps/place/Avantrac+Heavy+Machinery+Inc./@10.2834911,123.8586933,16.75z/data=!4m5!3m4!1s0x33a99c3f171580c1:0x29a4beccf50506b3!8m2!3d10.2841703!4d123.859529"
-                target="_blank"><i class="fas fa-map-marker"></i>41 F. Ramos St, Cebu City, 6000 Cebu</a></li>
-            <li> <a href="tel:+032 253 1871"> <i class="fas fa-phone-alt"></i>(032) 253 1871</a></li>
-            <li> <a href="mmailto:webmaster@example.com?Subject=Avantrac%20Inquiry"> <i class="far fa-envelope"></i>
-                avantgrac@gmail.com</a></li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <hr class="clearfix w-100 d-md-none pb-3">
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase">Quick Links</h5>
-
-          <ul class="list-unstyled custom-list">
-            <li class="text-uppercase">
-              <a href="#!">home</a>
-            </li>
-            <li class="text-uppercase">
-              <a href="#!">about</a>
-            </li>
-            <li class="text-uppercase">
-              <a href="#!">contact</a>
-            </li>
-            <li class="text-uppercase">
-              <a href="#!">gallery</a>
-            </li>
-          </ul>
-
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 mb-md-0 mb-3">
-
-          <!-- Links -->
-          <h5 class="text-uppercase">Gallery</h5>
-
-
-          <div class="row">
-            <div class="col">
-              <div class="view overlay z-depth-1-half">
-                <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
-                <a data-toggle="modal" data-target="#basicExampleModal1">
-                  <div class="mask rgba-white-light"></div>
-                </a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="view overlay z-depth-1-half">
-                <img src="images/carousel/carousel2.png" class="img-fluid" alt="">
-                <a data-toggle="modal" data-target="#basicExampleModal2">
-                  <div class="mask rgba-white-light"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div class="row pt-2">
-            <div class="col">
-              <div class="view overlay z-depth-1-half">
-                <img src="images/carousel/carousel3.png" class="img-fluid" alt="">
-                <a data-toggle="modal" data-target="#basicExampleModal3">
-                  <div class="mask rgba-white-light"></div>
-                </a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="view overlay z-depth-1-half">
-                <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
-                <a data-toggle="modal" data-target="#basicExampleModal4">
-                  <div class="mask rgba-white-light"></div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-        <!-- Grid column -->
-
-      </div>
-      <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">Copyright © 2019 Avantrac - All Rights Reserved.
-      <a href="https://avantrac.net"> Avantrac.com</a>
-    </div>
-    <!-- Copyright -->
-
-  </footer>
-  <!-- Footer -->
+  <!-- footer -->
+  <?php include_once 'footer.php';?>
+  <!-- /footer -->
   <!-- modal ///////////////////// -->
   <!-- Modal -->
-  <div class="modal fade " id="basicExampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade " id="basicExampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body ">
-          <img src="images/carousel/carousel2.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade " id="basicExampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="images/carousel/carousel3.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade " id="basicExampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel"></h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <img src="images/carousel/carousel1.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </div>
-  </div>
+ 
   <!-- modal ///////////////////// -->
   <!-- jQuery -->
   <script type="text/javascript" src="js/jquery.min.js"></script>
