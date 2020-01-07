@@ -48,6 +48,11 @@
   border-color: #800000 !important;
 }
 
+div .border-bottom{
+  border-width:thin !important;
+  border-color: #800000 !important;
+}
+
 ul{
   font-size: 14px;
   font-weight: normal;
