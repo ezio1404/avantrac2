@@ -8,21 +8,21 @@
   <div class="row">
 
     <!-- Grid column -->
-    <div class="col-md-6 mt-md-0 mt-3 pl-5">
+    <div class="col-md-6 mt-md-0 mt-3">
 
       <!-- Content -->
       <img src="images/logo/logowhite.png" class="img-fluid" alt="">
       <h5 class="text-uppercase">Avantrac Heavy Machinery</h5>
-      <p>
+      <p class="text-justify">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum corporis rerum necessitatibus dolorum
         corrupti architecto officia sequi assumenda quidem.
       </p>
       <ul class="list-unstyled">
         <li> <a
-            href="https://www.google.com/maps/place/Avantrac+Heavy+Machinery+Inc./@10.2834911,123.8586933,16.75z/data=!4m5!3m4!1s0x33a99c3f171580c1:0x29a4beccf50506b3!8m2!3d10.2841703!4d123.859529"
-            target="_blank"><i class="fas fa-map-marker"></i>41 F. Ramos St, Cebu City, 6000 Cebu</a></li>
+            href="https://www.google.com/maps/place/Avantrac/@10.2912101,123.8784552,19.5z/data=!4m5!3m4!1s0x0:0x65f3b59015e26b9e!8m2!3d10.2916239!4d123.8782929"
+            target="_blank"><i class="fas fa-map-marker"></i>Natalio B. Bacalso Ave, Cebu City, Cebu 6000</a></li>
         <li> <a href="tel:+032 253 1871"> <i class="fas fa-phone-alt"></i>(032) 253 1871</a></li>
-        <li><a href="mmailto:webmaster@example.com?Subject=Avantrac%20Inquiry"> <i class="far fa-envelope"></i>avantrac@gmail.com</a></li>
+        <li><a href="mailto:webmaster@example.com?Subject=Avantrac%20Inquiry"> <i class="far fa-envelope"></i>avantrac@gmail.com</a></li>
       </ul>
 
     </div>

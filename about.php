@@ -51,6 +51,13 @@
           <li class="nav-item">
             <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
           </li>
+          <li class="nav-item">
+            <form class="form-inline">
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
+          </li>
         </ul>
 
         <!-- Right -->
@@ -85,7 +92,7 @@
   <!-- Intro -->
   <div class="card card-intro mb-5 ">
 
-  </div>
+    </div>
 
   <!--Main layout-->
   <main>
@@ -94,10 +101,10 @@
       <section class="dark-grey-text">
     
         <div class="row pr-lg-5 ">
-          <div class="col-md-7 mb-4">
+          <div class="col-md-7 mb-4 ">
     
             <div class="view ">
-              <img src="images/logo/logo.jpg" class="img-fluid" alt="smaple image">
+              <img src="images/logo/logo.jpg"  alt="smaple image">
             </div>
     
           </div>
@@ -108,8 +115,8 @@
     
               <p>Lorem ipsum dolor sit amet consectetur adip elit. Maiores deleniti explicabo voluptatem quisquam nulla asperiores aspernatur aperiam voluptate et consectetur minima delectus, fugiat eum soluta blanditiis adipisci, velit dolore magnam.</p>
               
-              <button type="button" class="btn btn-orange btn-rounded mx-0">Contact us now!</button>
-    
+
+              <a href="contact.php" class="btn btn-orange btn-rounded mx-0"> Contact us now!</a>
             </div>
           </div>
         </div>
