@@ -1,3 +1,7 @@
+<?php
+include_once 'dbhelper.php';
+$brandList= getAllBrand();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -116,41 +120,42 @@
 
                             <!--Grid row-->
                             <div class="row wow fadeIn">
-                                <!-- loop here  -->
-                                <!--Grid column-->
-                                <div class="col-lg-4 col-md-6 mb-4">
+                               <!-- loop here  -->
+          <?php
+          foreach($brandList as $brandData){
+          ?>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <!-- Card -->
+            <div class="card">
+              <!-- Card image -->
+              <div class="view overlay">
+                <img class="card-img-top" src="images/brand/<?php echo $brandData['brand_image']?>" alt="Card image cap">
+                <a href="#!">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
 
-                                    <!-- Card -->
-                                    <div class="card">
+              <!-- Card content -->
+              <div class="card-body">
 
-                                        <!-- Card image -->
-                                        <div class="view overlay">
-                                            <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
-                                            <a href="galleryBrand.php?cat=cat">
-                                                <div class="mask rgba-white-slight"></div>
-                                            </a>
-                                        </div>
+                <!-- Title -->
+                <h4 class="card-title"><?php echo $brandData['brand_name']?></h4>
+                <!-- Text -->
+                <p class="card-text"><?php echo $brandData['brand_desc']?></p>
+                <!-- Button -->
+                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
-                                        <!-- Card content -->
-                                        <div class="card-body">
+              </div>
 
-                                            <!-- Title -->
-                                            <h4 class="card-title">truck brands</h4>
-                                            <!-- Text -->
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the
-                                                card's content.</p>
-                                            <!-- Button -->
-                                            <a href="" class="btn btn-info btn-md"> View <i
-                                                    class="fas fa-angle-double-right"></i></a>
-
-                                        </div>
-
-                                    </div>
-                                    <!-- Card -->
-
-                                </div>
-                                <!--Grid column-->
+            </div>
+            <!-- Card -->
+          </div>
+          <!--Grid column-->
+                <?php
+          }
+                ?>
+          <!-- end loop -->
                             </div>
                             <!--Grid row-->
 

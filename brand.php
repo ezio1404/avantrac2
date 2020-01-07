@@ -1,3 +1,7 @@
+<?php
+include_once 'dbhelper.php';
+$brandList = getAllBrand();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -81,7 +85,7 @@
         <div class="container  my-5 py-5">
             <div class="row">
                 <div class="col-md-4">
-                    <form action="brandController.php" method="POST">
+                    <form action="brandController.php" method="POST"  enctype="multipart/form-data">
 
                         <!-- Grid row -->
                         <div class="row">
@@ -128,12 +132,21 @@
                             </tr>
                         </thead>
                         <tbody id="myBody">
+                            <?php
+                            foreach($brandList as $brandData){
+                            ?>
                             <tr>
-                                <td>Tiger Nixon</td>
-                                <td>System Architect</td>
-                                <td>System Architect</td>
-                                <td>Edinburgh</td>
+                                <td><?php echo $brandData['brand_id'];?></td>
+                                <td><?php echo $brandData['brand_name'];?></td>
+                                <td><?php echo $brandData['brand_desc'];?></td>
+                                <td>
+                                    <img src="images/brand/<?php echo $brandData['brand_image'];?>" class="img-fluid" style="height : 10.5rem !important; width : auto !important;  margin-left: auto;
+                                    margin-right: auto;"  alt="">
+                                </td>
                             </tr>
+                            <?php
+                            }
+                            ?>
                         <tfoot>
                             <tr>
                                 <th>#</th>
