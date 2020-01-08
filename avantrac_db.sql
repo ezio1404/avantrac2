@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 07, 2020 at 04:00 PM
+-- Generation Time: Jan 08, 2020 at 11:02 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.26
 
@@ -40,7 +40,8 @@ CREATE TABLE `tbl_brand` (
 --
 
 INSERT INTO `tbl_brand` (`brand_id`, `brand_name`, `brand_desc`, `brand_image`) VALUES
-(1, 'asdasd', 'asdasd', '6693-2.jpg');
+(1, 'asdasd', 'asdasd', '1523-logo.jpg'),
+(2, 'CAT', 'cat is waht', '1523-logo.jpg');
 
 -- --------------------------------------------------------
 
@@ -59,6 +60,15 @@ CREATE TABLE `tbl_truck` (
   `type_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `tbl_truck`
+--
+
+INSERT INTO `tbl_truck` (`truck_id`, `truck_name`, `truck_description`, `truck_features`, `truck_brochure`, `truck_image`, `brand_id`, `type_id`) VALUES
+(2, 'qweqw', 'qweqw', 'eqweq,qweqwe,qweqwe,qweqweqw', 'Red-Cat-245hp-4X2-Dumptruck-WP6.245E40.pdf', '5495-2.jpg', 1, 4),
+(3, 'asdasd', 'asdasd', 'asdas,asdasd,qweqw', '6491-150-Crawler-Excavator-1.pdf', '5495-2.jpg', 2, 5),
+(4, '12312AS', 'Asdas', 'asd', '5693-150-Crawler-Excavator-1.pdf', '1494-4.jpg', 2, 5);
+
 -- --------------------------------------------------------
 
 --
@@ -67,16 +77,18 @@ CREATE TABLE `tbl_truck` (
 
 CREATE TABLE `tbl_type` (
   `type_id` int(11) NOT NULL,
-  `type_name` varchar(255) NOT NULL
+  `type_name` varchar(255) NOT NULL,
+  `type_image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_type`
 --
 
-INSERT INTO `tbl_type` (`type_id`, `type_name`) VALUES
-(1, 'gwapo'),
-(2, 'gwapo');
+INSERT INTO `tbl_type` (`type_id`, `type_name`, `type_image`) VALUES
+(4, 'excavator', '8234-1.jpg'),
+(5, 'Dump Truck', '4719-2.jpg'),
+(6, 'Bulldozer', '5130-4.jpg');
 
 --
 -- Indexes for dumped tables
@@ -92,7 +104,9 @@ ALTER TABLE `tbl_brand`
 -- Indexes for table `tbl_truck`
 --
 ALTER TABLE `tbl_truck`
-  ADD PRIMARY KEY (`truck_id`);
+  ADD PRIMARY KEY (`truck_id`),
+  ADD KEY `brand_id` (`brand_id`),
+  ADD KEY `type_id` (`type_id`);
 
 --
 -- Indexes for table `tbl_type`
@@ -108,19 +122,30 @@ ALTER TABLE `tbl_type`
 -- AUTO_INCREMENT for table `tbl_brand`
 --
 ALTER TABLE `tbl_brand`
-  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `brand_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tbl_truck`
 --
 ALTER TABLE `tbl_truck`
-  MODIFY `truck_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `truck_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_type`
 --
 ALTER TABLE `tbl_type`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `tbl_truck`
+--
+ALTER TABLE `tbl_truck`
+  ADD CONSTRAINT `tbl_truck_ibfk_1` FOREIGN KEY (`brand_id`) REFERENCES `tbl_brand` (`brand_id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `tbl_truck_ibfk_2` FOREIGN KEY (`type_id`) REFERENCES `tbl_type` (`type_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
