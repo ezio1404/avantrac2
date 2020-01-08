@@ -1,3 +1,8 @@
+<?php
+include_once 'dbhelper.php';
+$typeData =getTypeOfTruck(array($_GET['id']));
+$truckTypeList = getAllTruckByType(array($_GET['id']));
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -111,7 +116,7 @@
 
       <!--Image-->
       <div class="view overlay z-depth-1-half">
-        <img src="https://mdbootstrap.com/img/Photos/Others/img%20(16).jpg" class="img-fluid" alt="">
+        <img src="images/type/<?php echo $typeData['type_image']?>" class="img-fluid" alt="">
         <a href="#">
           <div class="mask rgba-white-light"></div>
         </a>
@@ -123,13 +128,13 @@
     <!--Grid column-->
     <div class="col-md-6 mb-4 mb-md-0">
 
-      <h3 class="font-weight-bold">Material Design Blocks</h3>
-
+      <h3 class="font-weight-bold border-bottom "><?php echo $typeData['type_name']?></h3>
+<!-- 
       <p class="text-muted">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Id quam sapiente
         molestiae
-        numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p>
+        numquam quas, voluptates omnis nulla ea odio quia similique corrupti magnam, doloremque laborum.</p> -->
 
-      <a class="btn btn-brown btn-md ml-0" href="#" role="button">Travel<i class="fa fa-plane ml-2"></i></a>
+      <!-- <a class="btn btn-brown btn-md ml-0" href="#" role="button">Travel<i class="fa fa-plane ml-2"></i></a> -->
 
     </div>
     <!--Grid column-->
@@ -146,7 +151,60 @@
         <div class="container ">
             <hr>
         </div>
+        <div class="container">
+      <h2 class="text-uppercase text-center"><?php echo $typeData['type_name']?></h2>
+      <hr>
+      <!--Section: Products v.3-->
+      <section class=" mb-4">
+        <!--Grid row-->
+        <div class="row wow fadeIn">
+          <!-- loop here  -->
+          <?php
+          foreach($truckTypeList as $truckTypeData){
+          ?>
+          <!--Grid column-->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <!-- Card -->
+            <div class="card">
+              <!-- Card image -->
+              <div class="view overlay">
+                <img class="card-img-top" style="height: 250px !important;" src="images/trucks/<?php echo $truckTypeData['truck_image']?>" alt="Card image cap">
+                <a href="galleryProduct.php?id=<?php echo $truckTypeData['truck_id']?>">
+                  <div class="mask rgba-white-slight"></div>
+                </a>
+              </div>
 
+              <!-- Card content -->
+              <div class="card-body">
+
+                <!-- Title -->
+                <h4 class="card-title"><?php echo $truckTypeData['truck_name']?></h4>
+                <!-- Text -->
+                <p class="card-text"><?php echo $truckTypeData['truck_description']?></p>
+                <!-- Button -->
+                <a href="galleryProduct.php?id=<?php echo $truckTypeData['truck_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+
+              </div>
+
+            </div>
+            <!-- Card -->
+          </div>
+          <!--Grid column-->
+                <?php
+          }
+                ?>
+          <!-- end loop -->
+        </div>
+        <!--Grid row-->
+
+
+
+      </section>
+      <!--Section: Products v.3-->
+
+
+
+    </div>
     </main>
     <!--Main layout-->
     <!-- footer -->

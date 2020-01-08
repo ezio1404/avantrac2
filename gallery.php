@@ -1,6 +1,7 @@
 <?php
 include_once 'dbhelper.php';
 $brandList= getAllBrand();
+$typeList= getAllType();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +132,7 @@ $brandList= getAllBrand();
               <!-- Card image -->
               <div class="view overlay">
                 <img class="card-img-top" src="images/brand/<?php echo $brandData['brand_image']?>" alt="Card image cap">
-                <a href="#!">
+                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -144,7 +145,7 @@ $brandList= getAllBrand();
                 <!-- Text -->
                 <p class="card-text"><?php echo $brandData['brand_desc']?></p>
                 <!-- Button -->
-                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
 
@@ -172,6 +173,9 @@ $brandList= getAllBrand();
                             <!--Grid row-->
                             <div class="row wow fadeIn">
                                 <!-- loop here  -->
+                                <?php
+                                foreach($typeList as $typeData){
+                                ?>
                                 <!--Grid column-->
                                 <div class="col-lg-4 col-md-6 mb-4">
 
@@ -180,8 +184,8 @@ $brandList= getAllBrand();
 
                                         <!-- Card image -->
                                         <div class="view overlay">
-                                            <img class="card-img-top" src="images/logo/logo.jpg" alt="Card image cap">
-                                            <a href="galleryType.php?cat=dumptruck">
+                                            <img class="card-img-top " style="height: 250px !important;" src="images/type/<?php echo $typeData['type_image']?>" alt="Card image cap">
+                                            <a href="galleryType.php?id=<?php echo $typeData['type_id']?>">
                                                 <div class="mask rgba-white-slight"></div>
                                             </a>
                                         </div>
@@ -190,13 +194,10 @@ $brandList= getAllBrand();
                                         <div class="card-body">
 
                                             <!-- Title -->
-                                            <h4 class="card-title">truck kinds</h4>
+                                            <h4 class="card-title text-uppercase"><?php echo $typeData['type_name']?></h4>
                                             <!-- Text -->
-                                            <p class="card-text">Some quick example text to build on the card title and
-                                                make up the bulk of the
-                                                card's content.</p>
                                             <!-- Button -->
-                                            <a href="" class="btn btn-info btn-md"> View <i
+                                            <a href="galleryType.php?id=<?php echo $typeData['type_id']?>" class="btn btn-info btn-md"> View <i
                                                     class="fas fa-angle-double-right"></i></a>
 
                                         </div>
@@ -206,7 +207,9 @@ $brandList= getAllBrand();
 
                                 </div>
                                 <!--Grid column-->
-
+                                    <?php
+                                }
+                                    ?>
                             </div>
                             <!--Grid row-->
 

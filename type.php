@@ -86,17 +86,29 @@ $typeList = getAllType();
         <div class="container my-5 py-5">
             <div class="row">
                 <div class="col-md-4">
-                    <form action="typeController.php" method="POST">
+                    <form action="typeController.php" method="POST" enctype="multipart/form-data">
                         <!-- Grid row -->
                         <div class="row">
                             <!-- Grid column -->
                             <div class="col-md-12">
-                                <div class="md-form mb-0">
+                                <div class="md-form mb-5">
                                     <input type="text" id="type_name" class="form-control" name="type_name">
                                     <label for="type_name" class="">Type name</label>
                                 </div>
                             </div>
                             <!-- Grid column -->
+                            <!-- Grid column -->
+                            <div class="col-md-12 ">
+                            <span >Type Image</span>      
+
+                                <input type="file" name="file" id="type_image" placeholder="type_image">
+                                <img id="blah" src="images/logo/logo.jpg" class="my-5 img-fluid" style="height : 200px !important; width : auto !important;  margin-left: auto;
+                                    margin-right: auto;" alt="your image" />
+
+                            </div>
+                            <!-- Grid column -->
+
+
 
                             <div class="col-md-12">
                               <button class="btn btn-primary" type="submit" name="addType"><i class="fas fa-plus"></i> Add type</button>
@@ -184,7 +196,7 @@ $typeList = getAllType();
             }
         }
 
-        $("#brand_image").change(function () {
+        $("#type_image").change(function () {
             readURL(this);
         });
     </script>

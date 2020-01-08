@@ -105,8 +105,9 @@ $brandList = getAllBrand();
 
                             <!-- Grid column -->
                             <div class="col-md-12 ">
-                                <input type="file" name="file" id="brand_image" placeholder="brand_image">
-                                <img id="blah" src="images/logo/logo.jpg" class="my-5 img-fluid" style="height : 300px !important; width : auto !important;  margin-left: auto;
+                            <span>Brand Image</span>    
+                            <input type="file" name="file" id="brand_image" placeholder="brand_image">
+                                <img id="blah" src="images/logo/logo.jpg" class="my-5 img-fluid" style="height : 200px !important; width : auto !important;  margin-left: auto;
                                     margin-right: auto;" alt="your image" />
 
                             </div>
@@ -135,11 +136,11 @@ $brandList = getAllBrand();
                             <?php
                             foreach($brandList as $brandData){
                             ?>
-                            <tr>
-                                <td><?php echo $brandData['brand_id'];?></td>
-                                <td><?php echo $brandData['brand_name'];?></td>
-                                <td><?php echo $brandData['brand_desc'];?></td>
-                                <td>
+                            <tr >
+                                <td class="align-middle"><?php echo $brandData['brand_id'];?></td>
+                                <td class="align-middle"><?php echo $brandData['brand_name'];?></td>
+                                <td class="align-middle "><?php echo $brandData['brand_desc'];?></td>
+                                <td class="align-middle">
                                     <img src="images/brand/<?php echo $brandData['brand_image'];?>" class="img-fluid" style="height : 10.5rem !important; width : auto !important;  margin-left: auto;
                                     margin-right: auto;"  alt="">
                                 </td>

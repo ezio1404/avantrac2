@@ -1,3 +1,8 @@
+<?php
+include 'dbhelper.php';
+$truckData = getTruck(array($_GET['id']));
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -100,23 +105,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-5 mx-auto">
-                    <img src="images/trucks/1.jpg" class="img-fluid" alt="">
+                    <img src="images/trucks/<?php echo $truckData['truck_image'];?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-5 my-sm-5 my-lg-3">
-                    <h4 class="border-bottom pb-2" >Product Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, facilis.</h4>
-                    <p class="text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, atque porro,
-                        consequatur in labore, vero est dolore eius quaerat magni odio. Unde dolor error recusandae
-                        excepturi quae vero fuga, consequuntur libero expedita et, itaque commodi?<p>
+                    <h4 class="border-bottom pb-2" ><?php echo $truckData['truck_description'];?></h4>
+                    <p class="text-justify"><?php echo $truckData['truck_description'];?><p>
 
                         <h5 class="border-bottom">Features</h5>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><i class="fas fa-check red-text"></i> eafture1</li>
-                            <li class="list-group-item"><i class="fas fa-check red-text"></i> eafture1</li>
-                            <li class="list-group-item"><i class="fas fa-check red-text"></i> eafture1</li>
-                            <li class="list-group-item"><i class="fas fa-check red-text"></i> eafture1</li>
+                            <?php 
+                                // echo $truckData['truck_features'];
+                                $truckFeatures = explode(',',$truckData['truck_features']);
+                            ?>
+                            <?php
+                            foreach($truckFeatures as $tf){
+                            ?>
+                            <li class="list-group-item"><i class="fas fa-check red-text"></i> <?php echo $tf ?></li>
+                                <?php
+                            }
+                                ?>
                         </ul>
 
-                        <a href="" class="btn red darken-4 white-text btn-block lead"> <i class="far fa-file-pdf fa-lg mr-2"></i> Download Brochure</a>
+                        <a href="images/brochure/<?php echo $truckData['truck_brochure'];?>" target="_blank" class="btn red darken-4 white-text btn-block lead"> <i class="far fa-file-pdf fa-lg mr-2"></i> Download Brochure</a>
                 </div>
             </div>
         </div>
