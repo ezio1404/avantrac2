@@ -2,6 +2,9 @@
 include_once 'dbhelper.php';
 $typeList = getAllType();
 
+if(!$_SESSION['admin']=="avantrac"){
+    header("location:adminLogin.php?message=Please_Login");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">

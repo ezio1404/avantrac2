@@ -1,6 +1,10 @@
 <?php
 include_once 'dbhelper.php';
 $brandList = getAllBrand();
+
+if(!$_SESSION['admin']=="avantrac"){
+    header("location:adminLogin.php?message=Please_Login");
+  }
 ?>
 <!DOCTYPE html>
 <html lang="en">
