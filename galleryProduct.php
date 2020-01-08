@@ -57,12 +57,11 @@ $truckData = getTruck(array($_GET['id']));
                         <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <form class="form-inline">
-                            <div class="md-form my-0">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search"
-                                    aria-label="Search">
-                            </div>
-                        </form>
+                    <form class="form-inline" method="POST" action="searchController.php" >
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
                     </li>
                 </ul>
 
@@ -108,7 +107,9 @@ $truckData = getTruck(array($_GET['id']));
                     <img src="images/trucks/<?php echo $truckData['truck_image'];?>" class="img-fluid" alt="">
                 </div>
                 <div class="col-md-5 my-sm-5 my-lg-3">
-                    <h4 class="border-bottom pb-2" ><?php echo $truckData['truck_description'];?></h4>
+                    <h4 class="border-bottom pb-2" ><?php echo $truckData['truck_name'];?></h4>
+                    <h4 class=" pb-2" >Brand : <?php echo $truckData['brand_name'];?></h4>
+                    <h4 class=" pb-2" >Type : <?php echo $truckData['type_name'];?></h4>
                     <p class="text-justify"><?php echo $truckData['truck_description'];?><p>
 
                         <h5 class="border-bottom">Features</h5>

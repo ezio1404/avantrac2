@@ -58,12 +58,11 @@ $brandList = getAllTruckByBrand(array($_GET['id']));
                         <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <form class="form-inline">
-                            <div class="md-form my-0">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search"
-                                    aria-label="Search">
-                            </div>
-                        </form>
+                    <form class="form-inline" method="POST" action="searchController.php" >
+              <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
+              </div>
+            </form>
                     </li>
                 </ul>
 
@@ -181,8 +180,10 @@ $brandList = getAllTruckByBrand(array($_GET['id']));
                 <h4 class="card-title"><?php echo $brandData['truck_name']?></h4>
                 <!-- Text -->
                 <p class="card-text"><?php echo $brandData['truck_description']?></p>
+                <p class="card-text "><?php echo $brandData['truck_features']?></p>
+
                 <!-- Button -->
-                <a href="galleryProduct.php?id=<?php echo $truckTypeData['truck_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+                <a href="galleryProduct.php?id=<?php echo $brandData['truck_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
 

@@ -57,9 +57,9 @@ $typeList= getAllType();
                         <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <form class="form-inline">
+                        <form class="form-inline" method="POST" action="searchController.php">
                             <div class="md-form my-0">
-                                <input class="form-control mr-sm-2" type="text" placeholder="Search"
+                                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search"
                                     aria-label="Search">
                             </div>
                         </form>
@@ -105,12 +105,12 @@ $typeList= getAllType();
         <div class="container">
             <ul class="nav nav-tabs nav-justified" id="myTab" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link active lead text-uppercase " id="home-tab" data-toggle="tab" href="#home" role="tab"
-                        aria-controls="home" aria-selected="true">Brand</a>
+                    <a class="nav-link active lead text-uppercase " id="home-tab" data-toggle="tab" href="#home"
+                        role="tab" aria-controls="home" aria-selected="true">Brand</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link lead  text-uppercase" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
-                        aria-controls="profile" aria-selected="false">Types</a>
+                    <a class="nav-link lead  text-uppercase" id="profile-tab" data-toggle="tab" href="#profile"
+                        role="tab" aria-controls="profile" aria-selected="false">Types</a>
                 </li>
             </ul>
             <div class="tab-content mt-3" id="myTabContent">
@@ -121,42 +121,46 @@ $typeList= getAllType();
 
                             <!--Grid row-->
                             <div class="row wow fadeIn">
-                               <!-- loop here  -->
-          <?php
+                                <!-- loop here  -->
+                                <?php
           foreach($brandList as $brandData){
           ?>
-          <!--Grid column-->
-          <div class="col-lg-4 col-md-6 mb-4">
-            <!-- Card -->
-            <div class="card">
-              <!-- Card image -->
-              <div class="view overlay">
-                <img class="card-img-top" src="images/brand/<?php echo $brandData['brand_image']?>" alt="Card image cap">
-                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>">
-                  <div class="mask rgba-white-slight"></div>
-                </a>
-              </div>
+                                <!--Grid column-->
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <!-- Card -->
+                                    <div class="card">
+                                        <!-- Card image -->
+                                        <div class="view overlay">
+                                            <img class="card-img-top"
+                                                src="images/brand/<?php echo $brandData['brand_image']?>"
+                                                alt="Card image cap">
+                                            <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>">
+                                                <div class="mask rgba-white-slight"></div>
+                                            </a>
+                                        </div>
 
-              <!-- Card content -->
-              <div class="card-body">
+                                        <!-- Card content -->
+                                        <div class="card-body">
 
-                <!-- Title -->
-                <h4 class="card-title"><?php echo $brandData['brand_name']?></h4>
-                <!-- Text -->
-                <p class="card-text"><?php echo $brandData['brand_desc']?></p>
-                <!-- Button -->
-                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+                                            <!-- Title -->
+                                            <h4 class="card-title"><?php echo $brandData['brand_name']?></h4>
+                                            <!-- Text -->
+                                            <p class="card-text"><?php echo $brandData['brand_desc']?></p>
+                                            <!-- Button -->
+                                            <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>"
+                                                class="btn btn-info btn-md"> View <i
+                                                    class="fas fa-angle-double-right"></i></a>
 
-              </div>
+                                        </div>
 
-            </div>
-            <!-- Card -->
-          </div>
-          <!--Grid column-->
-                <?php
+                                    </div>
+                                    <!-- Card -->
+                                </div>
+                                <!--Grid column-->
+                                <?php
           }
                 ?>
-          <!-- end loop -->
+                                <!-- end loop -->
                             </div>
                             <!--Grid row-->
 
@@ -184,7 +188,9 @@ $typeList= getAllType();
 
                                         <!-- Card image -->
                                         <div class="view overlay">
-                                            <img class="card-img-top " style="height: 250px !important;" src="images/type/<?php echo $typeData['type_image']?>" alt="Card image cap">
+                                            <img class="card-img-top " style="height: 250px !important;"
+                                                src="images/type/<?php echo $typeData['type_image']?>"
+                                                alt="Card image cap">
                                             <a href="galleryType.php?id=<?php echo $typeData['type_id']?>">
                                                 <div class="mask rgba-white-slight"></div>
                                             </a>
@@ -194,10 +200,12 @@ $typeList= getAllType();
                                         <div class="card-body">
 
                                             <!-- Title -->
-                                            <h4 class="card-title text-uppercase"><?php echo $typeData['type_name']?></h4>
+                                            <h4 class="card-title text-uppercase"><?php echo $typeData['type_name']?>
+                                            </h4>
                                             <!-- Text -->
                                             <!-- Button -->
-                                            <a href="galleryType.php?id=<?php echo $typeData['type_id']?>" class="btn btn-info btn-md"> View <i
+                                            <a href="galleryType.php?id=<?php echo $typeData['type_id']?>"
+                                                class="btn btn-info btn-md"> View <i
                                                     class="fas fa-angle-double-right"></i></a>
 
                                         </div>
@@ -207,7 +215,7 @@ $typeList= getAllType();
 
                                 </div>
                                 <!--Grid column-->
-                                    <?php
+                                <?php
                                 }
                                     ?>
                             </div>

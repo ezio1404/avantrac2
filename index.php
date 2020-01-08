@@ -56,9 +56,9 @@ $brandList= getAllBrand();
             <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <form class="form-inline">
+            <form class="form-inline" method="POST" action="searchController.php" >
               <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
               </div>
             </form>
           </li>
@@ -163,7 +163,7 @@ $brandList= getAllBrand();
               <!-- Card image -->
               <div class="view overlay">
                 <img class="card-img-top" src="images/brand/<?php echo $brandData['brand_image']?>" alt="Card image cap">
-                <a href="#!">
+                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>">
                   <div class="mask rgba-white-slight"></div>
                 </a>
               </div>
@@ -176,7 +176,7 @@ $brandList= getAllBrand();
                 <!-- Text -->
                 <p class="card-text"><?php echo $brandData['brand_desc']?></p>
                 <!-- Button -->
-                <a href="" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
+                <a href="galleryBrand.php?id=<?php echo $brandData['brand_id']?>" class="btn btn-info btn-md"> View <i class="fas fa-angle-double-right"></i></a>
 
               </div>
 

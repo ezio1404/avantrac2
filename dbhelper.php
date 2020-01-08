@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 
 function dbconn(){
     try{
@@ -140,14 +140,14 @@ function getAllTruckByType($data){
 // //////////////////////////////////////
 
 
-function search($data){
+function searchTruck($data){
     $dbconn=dbconn();
-    $sql="SELECT DISTINCT * FROM tbl_truck,tbl_type,tbl_brand WHERE tbl_truck.type_id=tbl_type.type_id AND tbl_truck.brand_id = tbl_brand.brand_id AND CONCAT(truck_name,truck_description,truck_description,truck_features,truck_brochure,type_name,brand_name)  LIKE '%?%' 
-    ";
+    $sql="SELECT DISTINCT * FROM tbl_truck,tbl_type,tbl_brand WHERE tbl_truck.type_id=tbl_type.type_id AND tbl_truck.brand_id = tbl_brand.brand_id 
+    AND CONCAT(truck_name,truck_description,truck_description,truck_features,type_name,brand_name) LIKE '%".$data[0]."%'";
     $stmt=$dbconn->prepare($sql);
     $stmt->execute($data);
     $rows=$stmt->fetchAll(PDO::FETCH_ASSOC);
     $dbconn=destroy();
     return $rows;
-}// end of search
+}// end of searchTruck
 

@@ -52,9 +52,9 @@
             <a class="nav-link waves-effect" href="gallery.php">Gallery</a>
           </li>
           <li class="nav-item">
-            <form class="form-inline">
+          <form class="form-inline" method="POST" action="searchController.php" >
               <div class="md-form my-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" aria-label="Search">
               </div>
             </form>
           </li>
